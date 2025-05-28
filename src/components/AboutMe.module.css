@@ -1,0 +1,124 @@
+.aboutSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 170px 6rem 2rem 6rem;
+  min-height: calc(100vh - 80px);
+
+  color: white;
+}
+
+.profileContainer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+
+.profileImage {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.2);
+}
+
+.contentContainer {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 340px;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(45deg, #fff, #ffe0a3 60%, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.13rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.buttonContainer {
+  margin-top: 1.5rem;
+}
+
+.resumeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid orange;
+  color: orange;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.resumeButton:hover {
+  background-color: orange;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.resumeButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .aboutSection {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .profileContainer {
+    height: auto;
+    justify-content: center;
+  }
+
+  .profileImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .contentContainer {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+}
