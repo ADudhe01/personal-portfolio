@@ -1,0 +1,26 @@
+[
+  {
+    "logo": "🎓",
+    "institution": "University of New South Wales, Sydney",
+    "degree": "Bachelor of Advanced Computer Science (Transfer)",
+    "dates": "Feb 2025 – Present",
+    "grade": "WAM: 87/100",
+    "description": "Currently pursuing my undergraduate degree at UNSW after transferring. Focusing on advanced topics in AI, ML, and software engineering."
+  },
+  {
+    "logo": "🎓",
+    "institution": "University of Wollongong, Australia",
+    "degree": "Bachelor of Science (Computer Science)",
+    "dates": "July 2023 – Nov 2024",
+    "grade": "WAM: 90.67/100",
+    "description": "Completed 3 semesters at UOW, building a strong foundation in algorithms, data structures, and core CS subjects before transferring."
+  },
+  {
+    "logo": "🏫",
+    "institution": "Vidya Valley North Point Jr College, Pune",
+    "degree": "HSC (XII)",
+    "dates": "June 2021 – March 2022",
+    "grade": "91%",
+    "description": "Completed class 12 with a focus on Science and Computer Science, excelling in academics and extracurriculars."
+  }
+]

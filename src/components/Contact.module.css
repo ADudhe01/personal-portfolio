@@ -1,0 +1,101 @@
+.contactSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #16161d;
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #fff 0%, #ffa500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #bdbdbd;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.2rem 2rem 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input,
+.textarea {
+  background: transparent;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 1.5px solid #ffa500;
+  box-shadow: 0 0 8px 0 #ffa50055;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.sendButton {
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #ffa500 0%, #ff7e5f 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(255, 165, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sendButton:hover {
+  background: linear-gradient(90deg, #ff7e5f 0%, #ffa500 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+}

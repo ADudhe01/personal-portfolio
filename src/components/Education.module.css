@@ -1,0 +1,146 @@
+.educationSection {
+  padding: 40px 6rem 6rem 6rem;
+  background-color: #16161d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #fff 0%, #ffe0a3 50%, #ffa500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  display: inline-block;
+}
+
+.timelineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.timelineDot {
+  position: relative;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  background: #16161d;
+  border: 3px solid #ffa500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px 0 rgba(255,165,0,0.10);
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 17px;
+  top: 36px;
+  width: 3px;
+  height: calc(100% - 36px);
+  background: linear-gradient(180deg, #ffa500 0%, #ffe0a3 100%);
+  z-index: 1;
+}
+
+.eduCard {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 15px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem 2rem;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.eduCard:hover {
+  box-shadow: 0 8px 32px 0 rgba(255, 165, 0, 0.15);
+  transform: translateY(-3px) scale(1.01);
+}
+
+.eduHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.7rem;
+}
+
+.institution {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.degree {
+  font-size: 1.05rem;
+  color: #bdbdbd;
+  font-weight: 500;
+}
+
+.eduMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.dates {
+  font-size: 1rem;
+  color: #ffa500;
+  font-weight: 500;
+}
+
+.grade {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.08rem;
+  color: #bdbdbd;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .educationSection {
+    padding: 40px 1rem 6rem 1rem;
+  }
+  .timelineContainer {
+    max-width: 100%;
+  }
+  .eduCard {
+    padding: 1.2rem 1rem;
+  }
+}

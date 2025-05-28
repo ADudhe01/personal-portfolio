@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 7rem;
   padding: 170px 6rem 2rem 6rem;
   min-height: calc(100vh - 80px);
 
@@ -17,8 +17,8 @@
 }
 
 .profileImage {
-  width: 340px;
-  height: 340px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.08);

@@ -1,4 +1,9 @@
 body {
   margin: 0;
   background-color: #16161d;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

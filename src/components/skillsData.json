@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Full Stack",
+    "skills": ["React", "HTML", "CSS", "JavaScript", "Bootstrap"]
+  },
+  {
+    "category": "App Dev",
+    "skills": ["Flutter", "Dart"]
+  },
+  {
+    "category": "Languages",
+    "skills": ["C", "C++", "JavaScript", "Python", "Java"]
+  },
+  {
+    "category": "Others",
+    "skills": ["Git", "GitHub", "VS Code", "Colab"]
+  }
+] 

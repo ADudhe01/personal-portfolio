@@ -1,0 +1,37 @@
+[
+  {
+    "name": "PDFReaderChatbot",
+    "libraries": [
+      "Python",
+      "Streamlit",
+      "OpenAI",
+      "FAISS",
+      "LangChain",
+      "Vectorstore"
+    ],
+    "date": "Jan 2025",
+    "description": "This is a chatbot application built using Streamlit, LangChain, and OpenAI. It allows users to upload multiple PDFs, process the documents, and enables them to ask questions related to the content of the PDFs.",
+    "github": "https://github.com/ADudhe01/PDFReaderChatbot"
+  },
+  {
+    "name": "Dailify",
+    "libraries": ["Flutter", "Dart", "Firebase"],
+    "date": "Jan 2025",
+    "description": "Daily assistant app streamlines your day by offering a chatbot, scheduler, email summarizer, and spam filter, all in one convenient platform.",
+    "github": "https://github.com/nellyy2505/dailify"
+  },
+  {
+    "name": "Recipe App",
+    "libraries": ["Javascript", "HTML", "CSS", "React", "Spoonacular API"],
+    "date": "May 2025",
+    "description": "A simple React application to search for recipes and view detailed information about them, including ingredients and instructions",
+    "github": "https://github.com/ADudhe01/recipe-app"
+  },
+  {
+    "name": "To Do App",
+    "libraries": ["Javascript", "HTML", "CSS", "React", "Vite"],
+    "date": "May 2025",
+    "description": "A simple and interactive Todo List application built with React and Vite. This app allows users to add, complete, and track their daily tasks efficiently.",
+    "github": "https://github.com/ADudhe01/todoapp"
+  }
+]
