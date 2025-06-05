@@ -3,7 +3,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 7rem;
-  padding: 170px 6rem 2rem 6rem;
+  padding: 200px 6rem 2rem 6rem;
   min-height: calc(100vh - 80px);
 
   color: white;
@@ -53,6 +53,20 @@
   letter-spacing: -0.02em;
 }
 
+.cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 3px;
+  background-color: white; /* Or the desired cursor color */
+  animation: blink 0.7s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .description {
   font-family: "Inter", sans-serif;
   font-size: 1.13rem;
@@ -98,12 +112,28 @@
   transform: translateX(4px);
 }
 
+@media (max-width: 1200px) {
+  .aboutSection {
+    gap: 4rem;
+    padding: 200px 4rem 2rem 4rem;
+  }
+
+  .profileImage {
+    width: 350px;
+    height: 350px;
+  }
+
+  .contentContainer {
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 1024px) {
   .aboutSection {
     flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-    gap: 2rem;
+    align-items: center;
+    padding: 180px 2rem 2rem 2rem;
+    gap: 3rem;
   }
 
   .profileContainer {
@@ -112,13 +142,64 @@
   }
 
   .profileImage {
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
   }
 
   .contentContainer {
     max-width: 100%;
     height: auto;
-    margin-top: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 160px 1.5rem 2rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .profileImage {
+    width: 240px;
+    height: 240px;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .description {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 150px 1rem 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .profileImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .resumeButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

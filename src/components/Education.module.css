@@ -1,5 +1,5 @@
 .educationSection {
-  padding: 40px 6rem 6rem 6rem;
+  padding: 40px 6rem 3rem 6rem;
   background-color: #16161d;
   color: white;
   display: flex;
@@ -135,7 +135,7 @@
 
 @media (max-width: 900px) {
   .educationSection {
-    padding: 40px 1rem 6rem 1rem;
+    padding: 40px 1rem 3rem 1rem;
   }
   .timelineContainer {
     max-width: 100%;

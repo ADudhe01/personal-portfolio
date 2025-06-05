@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   background: #16161d;
-  padding: 40px 0;
+  padding: 2rem 1.5rem;
 }
 
 .title {
@@ -95,7 +95,41 @@
     padding: 1.5rem 0.5rem;
     max-width: 98vw;
   }
-  .title {
-    font-size: 2.1rem;
-  }
+}
+
+.statusMessage {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #fff;
+  background-color: rgba(76, 175, 80, 0.15); /* Light green background for success */
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.statusMessage p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  background-color: rgba(244, 67, 54, 0.15); /* Light red background for error */
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.resetButton {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetButton:hover {
+  background-color: darkorange;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

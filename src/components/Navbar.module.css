@@ -1,4 +1,6 @@
 .navbar {
+  background-color: rgba(255, 255, 255, 0.04); /* light background color */
+  height: 38px;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,13 +10,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(22, 22, 29, 0.9);
+  /* background-color: rgba(22, 22, 29, 0.9); */
   color: white;
   padding: 20px 40px;
-  font-family: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .myLogoIcon {
@@ -52,7 +56,7 @@
 }
 
 .navLinks a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -69,6 +73,12 @@
 
 .navLinks a:hover::after {
   width: 80%;
+}
+
+.navBtn {
+  /* Default style for desktop/larger screens */
+  display: flex; /* Or 'block', depending on desired layout */
+  align-items: center;
 }
 
 .navBtn a {
@@ -89,4 +99,143 @@
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+.menuIcon {
+  display: none;
+}
+
+/* Mobile Logo Styles */
+.mobileLogo {
+  display: none;
+}
+
+.mobileLogoIcon {
+  height: 150px;
+  width: auto;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileLogoIcon:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .navLinks {
+    margin-left: 100px;
+    gap: 2rem;
+  }
+
+  .myLogoIcon {
+    height: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    margin-left: 80px;
+    gap: 1.5rem;
+  }
+
+  .navLinks a {
+    font-size: 1rem;
+  }
+
+  .myLogoIcon {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(22, 22, 29, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    display: flex; /* Keep display flex for layout when visible */
+    margin-left: 0;
+    height: 100vh;
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Start not visible */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .showMenu {
+    display: flex !important; /* Show when toggled */
+    transform: translateX(0); /* Slide into view */
+    opacity: 1; /* Become visible */
+    visibility: visible; /* Make visible */
+  }
+
+  .menuIcon {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 5px;
+  }
+
+  .navBtn {
+    /* Style when inside the mobile menu */
+    display: block; /* Ensure it's displayed in the flex column */
+    margin-top: 1rem; /* Add some spacing */
+  }
+
+  .myLogoIcon {
+    position: static;
+    transform: none;
+    height: 60px;
+  }
+
+  .navLinks a {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+
+  /* Show mobile logo in menu */
+  .mobileLogo {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .myLogoIcon {
+    height: 50px;
+  }
+
+  .menuIcon {
+    font-size: 1.8rem;
+  }
+
+  .navLinks a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+
+  .mobileLogoIcon {
+    height: 130px;
+  }
 }
