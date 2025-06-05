@@ -61,7 +61,7 @@ A modern, responsive personal portfolio website built with React, showcasing my 
    yarn dev
    ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser to view the website.
+5. Open [https://adudhe01.github.io/personal-portfolio/](https://adudhe01.github.io/personal-portfolio/) in your browser to view the website.
 
 ## 📱 Responsive Design
 
