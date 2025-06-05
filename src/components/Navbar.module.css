@@ -203,6 +203,11 @@
     position: static;
     transform: none;
     height: 60px;
+    transition: none; /* Remove transition for mobile */
+  }
+
+  .myLogoIcon:hover {
+    transform: none; /* Remove hover effect for mobile */
   }
 
   .navLinks a {
