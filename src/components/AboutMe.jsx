@@ -1,6 +1,7 @@
 import styles from "./AboutMe.module.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import myPic from "../assets/myPic.png"; // Import the profile picture
 
 export default function AboutMe() {
   const [typedName, setTypedName] = useState("");
@@ -18,7 +19,7 @@ export default function AboutMe() {
         // Typing
         if (index < fullName.length) {
           setTypedName(fullName.substring(0, index + 1));
-          setIndex(prevIndex => prevIndex + 1);
+          setIndex((prevIndex) => prevIndex + 1);
         } else {
           // Done typing, start deleting after a pause
           setIsDeleting(true);
@@ -28,7 +29,7 @@ export default function AboutMe() {
         // Deleting
         if (index > 0) {
           setTypedName(fullName.substring(0, index - 1));
-          setIndex(prevIndex => prevIndex - 1);
+          setIndex((prevIndex) => prevIndex - 1);
         } else {
           // Done deleting, start typing after a pause
           setIsDeleting(false);
@@ -39,7 +40,13 @@ export default function AboutMe() {
 
     const timeout = setTimeout(
       handleTyping,
-      isDeleting ? (index === 0 ? pauseBeforeTyping : deletingSpeed) : (index === fullName.length ? pauseBeforeDeleting : typingSpeed)
+      isDeleting
+        ? index === 0
+          ? pauseBeforeTyping
+          : deletingSpeed
+        : index === fullName.length
+        ? pauseBeforeDeleting
+        : typingSpeed
     );
 
     return () => clearTimeout(timeout);
@@ -48,13 +55,16 @@ export default function AboutMe() {
   return (
     <section className={styles.aboutSection}>
       <div className={styles.profileContainer}>
-        <div className={styles.profileImage}></div>
+        <div className={styles.profileImage}>
+          <img src={myPic} alt="Atharva Dudhe" className={styles.profilePic} />
+        </div>
       </div>
 
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>
           Hi, I am <br />
-          {typedName}<span className={styles.cursor}>|</span>
+          {typedName}
+          <span className={styles.cursor}>|</span>
         </h1>
         <p className={styles.description}>
           I'm a second-year Computer Science student at UNSW with a passion for
@@ -70,7 +80,7 @@ export default function AboutMe() {
 
         <div className={styles.buttonContainer}>
           <a
-            href="https://drive.google.com/file/d/1LCQZf2JToYtAoo60KKbFfDhhjCi6SGTo/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tDJZwcPuSiDFUse5DTLef1UdhiQVZBKV/view?usp=sharing"
             className={styles.resumeButton}
             target="_blank"
             rel="noopener noreferrer"
