@@ -30,21 +30,31 @@ export default function NavBar() {
           </a>
         </div>
 
-        {/* Hamburger Menu Icon */}
         <div className={styles.menuIcon} onClick={toggleMenu}>
-          &#9776; {/* Unicode for hamburger icon */}
+          &#9776;
         </div>
 
         <div
           className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}
         >
-          {/* Mobile Logo Removed */}
-          <a href="#about" onClick={toggleMenu}>About</a>
-          <a href="#skills" onClick={toggleMenu}>Skills</a>
-          <a href="#projects" onClick={toggleMenu}>Projects</a>
-          <a href="#education" onClick={toggleMenu}>Education</a>
-          <a href="#contact" onClick={toggleMenu}>Contact</a>
-          <div className={styles.navBtn}>
+          <a href="#about" onClick={toggleMenu}>
+            About
+          </a>
+          <a href="#skills" onClick={toggleMenu}>
+            Skills
+          </a>
+          <a href="#projects" onClick={toggleMenu}>
+            Projects
+          </a>
+          <a href="#education" onClick={toggleMenu}>
+            Education
+          </a>
+          <a href="#contact" onClick={toggleMenu}>
+            Contact
+          </a>
+
+          {/* Mobile-only button - appears in mobile menu */}
+          <div className={`${styles.navBtn} ${styles.mobileOnly}`}>
             <a
               href="https://github.com/ADudhe01"
               target="_blank"
@@ -54,6 +64,17 @@ export default function NavBar() {
               Github Profile
             </a>
           </div>
+        </div>
+
+        {/* Desktop-only button - appears on the right side of navbar */}
+        <div className={`${styles.navBtn} ${styles.desktopOnly}`}>
+          <a
+            href="https://github.com/ADudhe01"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github Profile
+          </a>
         </div>
       </nav>
     </div>
