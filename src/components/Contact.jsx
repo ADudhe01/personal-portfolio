@@ -1,4 +1,3 @@
-import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import styles from "./Contact.module.css";
 
@@ -6,31 +5,34 @@ export default function Contact() {
   const form = useRef();
   const [formStatus, setFormStatus] = useState("idle"); // 'idle', 'sending', 'success', 'error'
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     setFormStatus("sending");
 
-    emailjs
-      .sendForm(
-        "service_49nasra", // from EmailJS dashboard
-        "template_6hxaash", // from EmailJS dashboard
-        form.current,
-        "mDOhmsByOOUAL65OH" // from EmailJS account
-      )
-      .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          setFormStatus("success");
+    try {
+      const formData = new FormData(form.current);
+
+      // Using Formspree - replace 'YOUR_FORM_ID' with your actual Formspree form ID
+      const response = await fetch("https://formspree.io/f/xjkaajpy", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
         },
-        (error) => {
-          console.error("Email error:", error.text);
-          setFormStatus("error");
-        }
-      )
-      .finally(() => {
-        form.current.reset(); // Reset the form after submission
       });
+
+      if (response.ok) {
+        console.log("Email sent successfully");
+        setFormStatus("success");
+        form.current.reset();
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("Email error:", error);
+      setFormStatus("error");
+    }
   };
 
   const resetForm = () => {
@@ -47,14 +49,14 @@ export default function Contact() {
         {formStatus === "idle" || formStatus === "sending" ? (
           <form ref={form} onSubmit={sendEmail} className={styles.form}>
             <input
-              name="user_email"
+              name="email"
               className={styles.input}
               type="email"
               placeholder="Your Email"
               required
             />
             <input
-              name="user_name"
+              name="name"
               className={styles.input}
               type="text"
               placeholder="Your Name"
@@ -74,19 +76,27 @@ export default function Contact() {
               rows={5}
               required
             />
-            <button className={styles.sendButton} type="submit" disabled={formStatus === "sending"}>
+            <button
+              className={styles.sendButton}
+              type="submit"
+              disabled={formStatus === "sending"}
+            >
               {formStatus === "sending" ? "Sending..." : "Send"}
             </button>
           </form>
         ) : formStatus === "success" ? (
           <div className={styles.statusMessage}>
             <p>Message sent successfully! Thank you for reaching out.</p>
-            <button className={styles.resetButton} onClick={resetForm}>Send Another Message</button>
+            <button className={styles.resetButton} onClick={resetForm}>
+              Send Another Message
+            </button>
           </div>
         ) : (
           <div className={`${styles.statusMessage} ${styles.errorMessage}`}>
             <p>There was an error sending your message. Please try again.</p>
-            <button className={styles.resetButton} onClick={resetForm}>Try Again</button>
+            <button className={styles.resetButton} onClick={resetForm}>
+              Try Again
+            </button>
           </div>
         )}
       </div>
