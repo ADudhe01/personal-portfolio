@@ -67,7 +67,7 @@ export default function AboutMe() {
           <span className={styles.cursor}>|</span>
         </h1>
         <p className={styles.description}>
-          I'm a second-year Computer Science student at UNSW with a passion for
+          I'm a third-year Computer Science student at UNSW with a passion for
           building sleek, functional web applications. I enjoy working with
           modern tools like Dart and JavaScript to craft smooth user
           experiences.

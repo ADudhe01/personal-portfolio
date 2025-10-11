@@ -14,11 +14,11 @@
     "github": "https://github.com/ADudhe01/PDFReaderChatbot"
   },
   {
-    "name": "Dailify",
-    "libraries": ["Flutter", "Dart", "Firebase"],
-    "date": "Jan 2025",
-    "description": "Daily assistant app streamlines your day by offering a chatbot, scheduler, email summarizer, and spam filter, all in one convenient platform.",
-    "github": "https://github.com/nellyy2505/dailify"
+    "name": "Pokédex",
+    "libraries": ["Javascript", "HTML", "CSS", "React", "PokeAPI"],
+    "date": "Oct 2025",
+    "description": "A dynamic Pokédex website that lets users search, explore, and view detailed information about Pokémon using live API data.",
+    "github": "https://github.com/ADudhe01/Pokedex"
   },
   {
     "name": "Recipe App",
