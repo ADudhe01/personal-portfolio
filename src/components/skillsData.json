@@ -1,7 +1,16 @@
 [
   {
     "category": "Full Stack",
-    "skills": ["React", "HTML", "CSS", "JavaScript", "Bootstrap"]
+    "skills": [
+      "React",
+      "Three.js",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "Bootstrap"
+    ]
   },
   {
     "category": "App Dev",
@@ -13,6 +22,6 @@
   },
   {
     "category": "Others",
-    "skills": ["Git", "GitHub", "VS Code", "Colab"]
+    "skills": ["Git", "GitHub", "VS Code", "Colab", "JWT", "REST APIs", "OAuth"]
   }
-] 
+]

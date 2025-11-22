@@ -28,10 +28,18 @@
     "github": "https://github.com/ADudhe01/recipe-app"
   },
   {
-    "name": "To Do App",
-    "libraries": ["Javascript", "HTML", "CSS", "React", "Vite"],
-    "date": "May 2025",
-    "description": "A simple and interactive Todo List application built with React and Vite. This app allows users to add, complete, and track their daily tasks efficiently.",
-    "github": "https://github.com/ADudhe01/todoapp"
+    "name": "Run Room",
+    "libraries": [
+      "Javascript",
+      "React",
+      "React Three Fiber",
+      "Three.js",
+      "Express",
+      "MongoDB",
+      "Strava API"
+    ],
+    "date": "Jan 2025",
+    "description": "A fitness gamification platform that connects to Strava, converts running/walking kilometers into points, and lets users redeem items to furnish their personalized 3D virtual recovery room built with React Three Fiber.",
+    "github": "https://github.com/ADudhe01/RunRoom"
   }
 ]
