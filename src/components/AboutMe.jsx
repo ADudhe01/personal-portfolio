@@ -56,7 +56,13 @@ export default function AboutMe() {
     <section className={styles.aboutSection}>
       <div className={styles.profileContainer}>
         <div className={styles.profileImage}>
-          <img src={myPic} alt="Atharva Dudhe" className={styles.profilePic} />
+          <img
+            src={myPic}
+            alt="Atharva Dudhe"
+            className={styles.profilePic}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

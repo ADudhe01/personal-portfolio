@@ -85,6 +85,14 @@
   width: 80%;
 }
 
+.navLinks a.active {
+  color: orange;
+}
+
+.navLinks a.active::after {
+  width: 80%;
+}
+
 .navBtn {
   /* Default style for desktop/larger screens */
   display: flex; /* Or 'block', depending on desired layout */

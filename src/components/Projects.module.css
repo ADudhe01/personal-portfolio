@@ -117,10 +117,25 @@
   text-align: left;
 }
 
-.githubButton {
+.buttonContainer {
   position: absolute;
   right: 2rem;
   bottom: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.projectCard:hover .buttonContainer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-8px);
+}
+
+.demoButton,
+.githubButton {
   background: #ffa500;
   color: #16161d;
   border: none;
@@ -129,17 +144,31 @@
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  box-shadow: 0 2px 8px 0 rgba(255,165,0,0.10);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s;
+  box-shadow: 0 2px 8px 0 rgba(255, 165, 0, 0.1);
+  transition: all 0.25s ease;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.projectCard:hover .githubButton {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(-8px);
+.demoButton {
+  background: transparent;
+  color: #ffa500;
+  border: 2px solid #ffa500;
+}
+
+.demoButton:hover {
+  background: #ffa500;
+  color: #16161d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px 0 rgba(255, 165, 0, 0.3);
+}
+
+.githubButton:hover {
+  background: #ffb733;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px 0 rgba(255, 165, 0, 0.3);
 }
 
 @media (max-width: 1200px) {
@@ -202,6 +231,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .buttonContainer {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
   .projectsContainer {
     padding: 30px 1rem 6rem 1rem;
@@ -235,8 +277,19 @@
     line-height: 1.5;
   }
 
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+
+  .demoButton,
   .githubButton {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -18,14 +18,26 @@ export default function Projects() {
               ))}
             </div>
             <p className={styles.projectDescription}>{project.description}</p>
-            <a
-              className={styles.githubButton}
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
+            <div className={styles.buttonContainer}>
+              {project.demo && (
+                <a
+                  className={styles.demoButton}
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo
+                </a>
+              )}
+              <a
+                className={styles.githubButton}
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.demo ? "View Code" : "View on GitHub"}
+              </a>
+            </div>
           </div>
         ))}
       </div>
