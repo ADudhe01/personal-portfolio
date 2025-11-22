@@ -2,10 +2,22 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .scroll-animation.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
