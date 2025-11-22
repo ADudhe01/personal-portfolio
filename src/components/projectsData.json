@@ -21,11 +21,18 @@
     "github": "https://github.com/ADudhe01/Pokedex"
   },
   {
-    "name": "Recipe App",
-    "libraries": ["Javascript", "HTML", "CSS", "React", "Spoonacular API"],
-    "date": "May 2025",
-    "description": "A simple React application to search for recipes and view detailed information about them, including ingredients and instructions",
-    "github": "https://github.com/ADudhe01/recipe-app"
+    "name": "Premier League Dashboard",
+    "libraries": [
+      "Javascript",
+      "React",
+      "Express",
+      "Vite",
+      "React Router",
+      "football-data.org API"
+    ],
+    "date": "Sept 2025",
+    "description": "A modern React dashboard for tracking Premier League standings, live matches, and team information with real-time updates and smart API caching to minimize requests.",
+    "github": "https://github.com/ADudhe01/premier-league-site"
   },
   {
     "name": "Run Room",
@@ -38,7 +45,7 @@
       "MongoDB",
       "Strava API"
     ],
-    "date": "Jan 2025",
+    "date": "Nov 2025",
     "description": "A fitness gamification platform that connects to Strava, converts running/walking kilometers into points, and lets users redeem items to furnish their personalized 3D virtual recovery room built with React Three Fiber.",
     "github": "https://github.com/ADudhe01/RunRoom"
   }
