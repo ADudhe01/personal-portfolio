@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./Contact.module.css";
+import ScrollAnimation from "./ScrollAnimation";
 
 export default function Contact() {
   const form = useRef();
@@ -41,11 +42,16 @@ export default function Contact() {
 
   return (
     <section className={styles.contactSection}>
-      <h1 className={styles.title}>Contact</h1>
-      <p className={styles.subtitle}>
-        Feel free to reach out for collaborations, questions, or just to say hi!
-      </p>
-      <div className={styles.formCard}>
+      <ScrollAnimation>
+        <h1 className={styles.title}>Contact</h1>
+      </ScrollAnimation>
+      <ScrollAnimation delay={200}>
+        <p className={styles.subtitle}>
+          Feel free to reach out for collaborations, questions, or just to say hi!
+        </p>
+      </ScrollAnimation>
+      <ScrollAnimation delay={400}>
+        <div className={styles.formCard}>
         {formStatus === "idle" || formStatus === "sending" ? (
           <form ref={form} onSubmit={sendEmail} className={styles.form}>
             <input
@@ -99,7 +105,8 @@ export default function Contact() {
             </button>
           </div>
         )}
-      </div>
+        </div>
+      </ScrollAnimation>
     </section>
   );
 }
