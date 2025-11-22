@@ -32,13 +32,57 @@
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
   border: 1px solid rgba(255,255,255,0.08);
-  padding: 2.2rem 2rem 2.5rem 2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   position: relative;
   min-height: 320px;
   transition: box-shadow 0.2s, transform 0.2s;
-  overflow: visible;
+  overflow: hidden;
+}
+
+.projectImageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 126, 95, 0.1) 100%);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 22, 29, 0.3) 0%,
+    rgba(22, 22, 29, 0.7) 100%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .imageOverlay {
+  opacity: 0.5;
+}
+
+.projectContent {
+  padding: 2.2rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .projectCard:hover {
@@ -126,6 +170,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s, transform 0.25s;
+  z-index: 10;
 }
 
 .projectCard:hover .buttonContainer {
@@ -232,15 +277,47 @@
 }
 
 @media (max-width: 768px) {
+  .projectCard {
+    overflow: hidden;
+  }
+
+  .projectContent {
+    padding-bottom: 1.5rem;
+  }
+
   .buttonContainer {
     opacity: 1 !important;
     pointer-events: auto !important;
     transform: none !important;
-    position: relative;
-    right: auto;
-    bottom: auto;
+    position: static !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
     margin-top: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: stretch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .demoButton,
+  .githubButton {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     justify-content: center;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
   }
 }
 
@@ -254,9 +331,21 @@
     margin-bottom: 1.5rem;
   }
 
+  .projectContent {
+    padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .projectCard {
-    padding: 1.8rem 1.5rem 2.2rem 1.5rem;
-    min-height: 280px;
+    min-height: auto;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .projectImageContainer {
+    height: 160px;
   }
 
   .projectName {
@@ -275,21 +364,26 @@
   .projectDescription {
     font-size: 1rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
   }
 
   .buttonContainer {
-    flex-direction: column;
-    gap: 0.5rem;
+    margin-top: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 0.6rem;
     width: 100%;
-    left: auto;
-    right: auto;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .demoButton,
   .githubButton {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.95rem;
+    min-height: 44px;
     width: 100%;
-    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }

@@ -1,3 +1,5 @@
+@import url("./components/ScrollAnimation.module.css");
+
 body {
   margin: 0;
   background-color: #16161d;

@@ -44,13 +44,33 @@
   box-shadow: 0 8px 32px 0 rgba(255, 165, 0, 0.15);
 }
 
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 165, 0, 0.2);
+}
+
 .cardTitle {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 2.1rem;
+  margin: 0;
   color: #ffa500;
   letter-spacing: -0.01em;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.skillCard:hover .cardIcon {
+  transform: scale(1.2) rotate(5deg);
 }
 
 .pillContainer {
