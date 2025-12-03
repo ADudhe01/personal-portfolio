@@ -86,7 +86,7 @@ export default function AboutMe() {
 
         <div className={styles.buttonContainer}>
           <a
-            href="https://drive.google.com/file/d/1tDJZwcPuSiDFUse5DTLef1UdhiQVZBKV/view?usp=sharing"
+            href="https://drive.google.com/file/d/1PK78Il3eU09uU4kouQjOesbYt0zKnPy3/view?usp=sharing"
             className={styles.resumeButton}
             target="_blank"
             rel="noopener noreferrer"
